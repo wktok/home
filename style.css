@@ -65,7 +65,7 @@ h1 {
 .nav__item{
   font-size: 16px;
   font-weight: bold;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.06em;
 }
 
 .nav__link--current {
@@ -151,9 +151,54 @@ h1 {
   object-fit: cover;
 }
 
+.footer__margin{
+  height:10px;
+  width: 100%;
+}
+
 footer{
   font-size: x-small;
   position: fixed;
   left: 0;
   bottom: 0;
+}
+
+
+/*--------------------------------
+ media Query 767
+---------------------------------*/
+@media screen and (max-width: 767px) {
+  /* LAYOUT */
+  .container {
+    padding: 0 20px;
+  }
+
+  /* HEADER */
+  .header {
+    height: 30px;
+    padding: 20px 20px;
+  }
+
+  .header__icon {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+
+  .nav__list {
+    column-gap: 15px;
+  }
+
+  .nav__item {
+    font-size: 12px;
+  }
+
+  /* PAGE TITLE */
+  .page-title {
+    font-size: clamp(20px, 5vw, 40px);
+  }
+
+  /* SUBPAGES BREADCRUMB */
+  .breadcrumb {
+    font-size: 12px;
+  }
 }
