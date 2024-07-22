@@ -212,7 +212,7 @@ footer{
   }
 
   /* PAGE TITLE */
-  .page-title {
+  .section-title {
     font-size: clamp(20px, 5vw, 40px);
   }
 
