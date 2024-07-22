@@ -83,13 +83,12 @@ h1 {
  PAGE TITLE
 ---------------------------------*/
 .section-title {
-  font-size: 60px;
   color: var(--text-color);
-  letter-spacing: 0.04em;
 }
 
 .section-title__text {
   font-size: 120px;
+  letter-spacing: 0.04em;
   padding: 20px 0;
   font-weight: bold;
 }
@@ -212,8 +211,8 @@ footer{
   }
 
   /* PAGE TITLE */
-  .section-title {
-    font-size: clamp(20px, 5vw, 40px);
+  .section-title__text {
+    font-size: 10vw;
   }
 
   /* SUBPAGES BREADCRUMB */
