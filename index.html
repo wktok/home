@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>WK HOME</title>
+    <title>WK home</title>
     <link rel="stylesheet" href="css/destyle.css">
     <link rel="stylesheet" href="style.css">
     <base target="_self">
@@ -14,51 +14,66 @@
         <a class="header__icon" href=".">WK</a>
         <nav class="nav">
             <ul class=nav__list>
-                <li class="nav__item"><a class="nav__link--current" href=".">PROJECTS</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">NEWS</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">ABOUT</a></li>
+                <li class="nav__item"><a class="nav__link--current" href="#projects">PROJECTS</a></li>
+                <li class="nav__item"><a class="nav__link" href="#NEWS">NEWS</a></li>
+                <li class="nav__item"><a class="nav__link" href="#ABOUT">ABOUT</a></li>
             </ul>
         </nav>
     </div>
 
     <div class="container">
-        <div class="page-title">
-            <h1>PROJECTS</h1>
-        </div>
-        <div class="projects">
-            <div class="projects__list">
-                <div class="projects__item">
-                    <a class="projects__link" target="_blank" href="photography.html">
-                        <img class="projects__img" src="images/photography/cat_thumbnail.jpg"/>
-                        <p class="projects__text">Photography</p>
-                    </a>
-                </div>
-                <div class="projects__item">
-                    <a class="projects__link" href=".">
-                        <img class="projects__img" src="images/placeholder.jpg"/>
-                        <p class="projects__text">coming soon...</p>
-                    </a>
-                </div>
-                <div class="projects__item">
-                    <a class="projects__link" href=".">
-                        <img class="projects__img" src="images/placeholder.jpg"/>
-                        <p class="projects__text">coming soon...</p>
-                    </a>
-                </div>
-                <div class="projects__item">
-                    <a class="projects__link" href=".">
-                        <img class="projects__img" src="images/placeholder.jpg"/>
-                        <p class="projects__text">coming soon...</p>
-                    </a>
-                </div>
-                <div class="projects__item">
-                    <a class="projects__link" href=".">
-                        <img class="projects__img" src="images/placeholder.jpg"/>
-                        <p class="projects__text">coming soon...</p>
-                    </a>
+        <section id="projcects">
+            <div class="section-title">
+                <h1 class="section-title__text">PROJECTS</h1>
+            </div>
+            <div class="projects__body">
+                <div class="projects__list">
+                    <!-- PJ: WEB DEV -->
+                    <div class="projects__item">
+                        <a class="projects__link" target="_blank" href="webdesign.html">
+                            <img class="projects__img" src="images/web_dev_thumbnail.jpg"/>
+                            <p class="projects__text">Web Development</p>
+                        </a>
+                    </div>
+                    
+                    <!-- PJ: CREATIVE CODING -->
+                    <div class="projects__item">
+                        <a class="projects__link" target="_blank" href="creativecoding.html">
+                            <img class="projects__img" src="images/creative_coding_thumbnail.jpg"/>
+                            <p class="projects__text">Creative Coding</p>
+                        </a>
+                    </div>
+
+                    <!-- PJ: PHOTOGRAPHY -->
+                    <div class="projects__item">
+                        <a class="projects__link" target="_blank" href="photography.html">
+                            <img class="projects__img" src="images/photography/cat_thumbnail.jpg"/>
+                            <p class="projects__text">Photography</p>
+                        </a>
+                    </div>
+
+                    <!-- PJ: WIP -->
+                    <div class="projects__item">
+                        <a class="projects__link" href=".">
+                            <img class="projects__img" src="images/placeholder.jpg"/>
+                            <p class="projects__text">coming soon...</p>
+                        </a>
+                    </div>
+
+                    <!-- PJ: WIP -->
+                    <div class="projects__item">
+                        <a class="projects__link" href=".">
+                            <img class="projects__img" src="images/placeholder.jpg"/>
+                            <p class="projects__text">coming soon...</p>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section> 
+
+        <section id="NEWS"></section>
+        <section id="ABOUT"></section>
+
     </div>
 
     <div class="footer__margin"></div>

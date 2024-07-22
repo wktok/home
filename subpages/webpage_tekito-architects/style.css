@@ -1,0 +1,476 @@
+@charset "utf-8";
+
+:root {
+    --text-color: #111111;
+    --bg-color: #eeeeee;
+    --main-color: rgba(240, 240, 240, 0.8);
+}
+
+/* --------------------------
+ GENERAL
+-------------------------- */
+body {
+    font-family: "Didact Gothic", Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    color: var(--text-color);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --------------------------
+ LAYOUT
+-------------------------- */
+.bg {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    height: 100vh;
+    background-color: var(--bg-color);
+
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex: 1;
+}
+
+/* --------------------------
+ INTRO
+-------------------------- */
+.intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--bg-color);
+    z-index: 100;
+    animation: disappear-bg 2s forwards;
+    animation-delay: 5s;
+}
+@keyframes disappear-bg {
+    50%{
+    left: 15vw;
+    right: calc(85vw - 360px);
+    opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+
+.intro__wrapper {
+    padding-top: 25vh;
+    padding-left: calc(15vw + 45px);
+    animation: disappear-title 2s forwards;
+    animation-delay: 5s;
+}
+@keyframes disappear-title {
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.intro__subtitle {
+    font-size: 50px;
+    letter-spacing: 0.05em;
+
+}
+
+.intro__title {
+    position: relative;
+    font-size: 150px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+
+.slideIn {
+    position: absolute;
+    top: 0;
+    left: 90px;
+    width: 0%;
+    overflow: hidden;
+    animation: slideIn 2.5s ease-in forwards;
+}
+@keyframes slideIn {
+    0% {
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+.slideIn-late {
+    position: absolute;
+    top: 0;
+    left: 96px;
+    width: 0%;
+    overflow: hidden;
+    animation: slideIn 3s ease-in forwards;
+    animation-delay: 1.6s;    
+}
+@keyframes slideIn {
+    0% {
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+.intro:hover {
+    cursor: pointer;
+}
+
+/* --------------------------
+ SLIDESHOW
+-------------------------- */
+.slideshow {
+    display: flex;
+    justify-content: center;
+}
+
+/* .slides {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+} */
+.slides__image:nth-child(n+2) {
+    display: none;
+}
+
+/* --------------------------
+ HEADER
+-------------------------- */
+.header {
+    position: relative;
+    width: 360px;
+    height: 100%;
+    background-color: var(--main-color);
+    margin-left: 15vw;
+    padding-left: 40px;
+    z-index: 10;
+}
+
+.header__logo {
+    margin-top: 25vh;
+    margin-bottom: 30px;
+}
+
+.header__link {
+    font-size: 25px;
+    line-height: 1;
+    letter-spacing: 0.25em;
+}
+
+.header__link:hover {
+    color: var(--bg-color);
+    text-shadow: 0.5px 0.5px 0px var(--text-color);
+}
+
+/* --------------------------
+ NAV
+-------------------------- */
+.nav__link {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 0.2em;
+    text-transform: capitalize;
+}
+
+.nav__link:hover {
+    color: var(--bg-color);
+    text-shadow: 0.8px 0.8px 0.8px var(--text-color);
+}
+
+/* --------------------------
+ SUBPAGES common
+-------------------------- */
+.header__title {
+    position: relative;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 0.2em;
+    text-transform: capitalize;
+    z-index: 100;
+}
+
+.main {
+    width: calc(100vw - 15vw - 360px - 25vw);
+    height: 80vh;
+    margin-right: 15vw;
+    margin-left: 10vw;
+    z-index: 5;
+}
+
+.fadeIn01 {
+    animation: 1.5s fadeIn01;
+}
+@keyframes fadeIn01 {
+    0% {
+        color: var(--bg-color);
+        text-shadow: 0.8px 0.8px 0.8px var(--text-color);
+    }
+    100% {
+        color: var(--text-color);
+        text-shadow: none;
+    }
+}
+
+/* --------------------------
+ SUBPAGES projects
+-------------------------- */
+.project-list__frame {
+    height: 80vh;
+    margin-top: 10vh;
+}
+
+.project-list__item {
+    transition: 1s;
+    position: relative;
+    width: 100%;
+    height: 25vh;
+}
+.project-list__item:hover {
+    cursor: pointer;
+}
+
+
+.project-list__item:nth-child(n+2) {
+    margin-top: 2.5vh;
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    background-color: var(--main-color);
+}
+
+.concept {
+    display: none;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* --------------------------
+ SUBPAGES about
+-------------------------- */
+.fadeIn02 {
+    animation: 1.5s linear fadeIn02;
+}
+@keyframes fadeIn02 {
+    0% {
+        transform: translateY(72px);
+        color: var(--bg-color);
+        text-shadow: 1px 1px 0 var(--text-color);
+    }
+    100% {
+        color: var(--text-color);
+    }
+}
+
+.portrait-frame {
+    position: absolute;
+    top: 35vh;
+    right: 10px;
+    width: 240px;
+    height: 240px;
+    z-index: 50;
+}
+
+.portrait {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.about__body {
+    margin-top: 40vh;
+}
+
+.about__text {
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+}
+
+.strong-text {
+    font-weight: bold;
+}
+
+.lang-selector {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.15em;
+}
+
+
+.ja {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+}
+
+.active {
+    text-decoration: underline;
+    text-underline-offset: 0.1rem;
+}
+
+.nonactive:hover, 
+.nonactive:active  {
+    text-decoration: underline;
+    text-underline-offset: 0.1rem;
+    text-shadow: 0.1px 0.1px 0 var(--text-color);
+    cursor: pointer;
+}
+
+#about-ja {
+    display: none;
+}
+
+/* --------------------------
+ SUBPAGES contact
+-------------------------- */
+.contact-info {
+    opacity: 0;
+    animation-name: lateFade;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes lateFade {
+    100% {
+        opacity: 1;
+    }
+}
+
+.contact__text {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.3;
+    letter-spacing: 0.1em;
+}
+
+.contact__text-ja {
+    font-size: 17px;
+}
+
+.contact__link:hover {
+    color: var(--bg-color);
+    text-shadow: 0.5px 0.5px 0px var(--text-color);
+}
+
+.sns {
+    text-decoration: underline;
+    text-underline-offset: 0.1rem;
+}
+
+.material-icons-round.md-15 {
+    font-size: 20px;
+}
+
+.contact__body {
+    position: relative;
+    margin-top: 30vh;
+}
+
+.map {
+    position: relative;
+    overflow: hidden;    
+    height: 40vh;
+}
+
+.map__link {
+    position: absolute;
+    font-size: 20px;
+    bottom: -25px;
+    right: 0px;
+    text-align: right;
+    text-decoration: underline;
+    text-underline-offset: 0.1rem;
+}
+
+.map__link:hover {
+    color: var(--bg-color);
+    text-shadow: 0.5px 0.5px 0px var(--text-color);
+}
+
+.form {
+    display: none;
+}
+
+.recruit {
+    display: none;
+}
+
+.form__title {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+}
+
+.form__input {
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    width: 100%;
+}
+
+#comment {
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    width: 100%;
+    height: 15vh;
+}
+
+.form__submit {
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+}
+
+.button {
+    text-decoration: underline;
+    text-underline-offset: 0.1rem;
+}
+.button:hover {
+    color: var(--bg-color);
+    text-shadow: 0.5px 0.5px 0px var(--text-color);
+}
+
+.recruit__title {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+}
+
+
+/* --------------------------
+GENERAL
+-------------------------- */
+
+
+

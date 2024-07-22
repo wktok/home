@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- GENERAL -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TA - contact</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <!-- ICONS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+    rel="stylesheet">
+    <!-- STYLE -->
+    <link rel="stylesheet" href="css/destyle.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header__logo">
+                <a class="header__link" href="index.html">TEKITO<br>Architects</a>
+            </div>
+            <div class="header__title fadeIn02"><a class="nav__link" href="contact.html">contact</a></div>
+            <div class="contact-info">
+                <div class="contact__text"><a id="bp" class="contact__link" href="#">Business Proposals/<br><span class="contact__text contact__text-ja">お仕事のご依頼</span></a></div>
+                <div class="contact__text"><a id="recruit" class="contact__link" href="#">Recruit/<br><span class="contact__text contact__text-ja">採用</span></a> </div>
+                <div class="contact__text"><span class="contact__text contact__text-ja">株式会社 テキトーアーキテクツ</span>/<br> TEKITO ARCHITECTS<br>
+                    <span class="contact__text contact__text-ja">一級建築士事務所</span><br>
+                    <span class="contact__text contact__text-ja">東京都知事登録第XXXXXX号<br></span>
+                    〒100-0005<br>
+                    <span class="contact__text contact__text-ja">東京都千代田区丸の内１丁目</div></span>
+                    <br>
+                <div class="contact__text">
+                    <a class="contact__link sns" target="_blank" href="https://www.instagram.com/">Instagram<span class="material-icons-round md-15">north_east</span></a>
+                </div>
+                <div class="contact__text">
+                    <a class="contact__link sns" target="_blank" href="https://www.linkedin.com/">LinkedIn<span class="material-icons-round md-15">north_east</span></a>
+                </div>
+            </div>
+            
+        </div>
+        <main class="main">
+            <div class="contact__body google-map">
+                <div id="map" class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.827853707484!2d139.76454987634293!3d35.681240529972506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2sTokyo%20Station!5e0!3m2!1sen!2sjp!4v1721472293168!5m2!1sen!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <a class="map__link" href="https://maps.app.goo.gl/iKd3VrRiBosYmxu97">google map<span class="ja">で開く</span></a>
+            </div>
+            <div class="contact__body form">
+                <form class="form">
+                    <div class="form__firstname">
+                        <label for="firstname" class="form__title">お名前* / Firstname*</label>
+                        <input type="text" name="firstname" id="firstname" required class="form__input">
+                    </div>
+                    <div class="form__lastname">
+                        <label for="lastname" class="form__title">フリガナ* / Lastname*</label>
+                        <input type="text" name="lastname" id="lastname" required class="form__input">
+                    </div>
+                    <div class="form__email">
+                        <label for="email" class="form__title">メールアドレス* / Email*</label>
+                        <input type="email" name="email" id="email" required class="form__input">
+                    </div>
+
+                    <label for="comment" class="form__title">お問い合わせ内容 / Comment</label>
+                    <textarea id="comment" name="comment" id="inquiry-type"></textarea>
+
+                    <div class="form__submit">
+                        <button type="submit" class="button">送信 / Send >></button>
+                    </div>
+                </form>
+            </div>
+            <div class="contact__body recruit">
+                <div class="recruit__text">
+                    <h1 class="recruit__title">採用情報</h1>
+                    <p class="contact__text contact__text-ja">現在、募集している職種はございません。<br>
+                        今後の採用情報については、当ページで随時更新いたしますので、定期的にご確認ください。<br>
+                        ご関心をお寄せいただきありがとうございます。
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <h1 class="recruit__title">Join TEKITO</h1>
+                    <p class="contact__text">We are always on the lookout for talented and passionate individuals who share our vision for design.
+                        Although we do not have any open positions at the moment, we are continually growing and encourage you to stay connected with us for future opportunities.
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
